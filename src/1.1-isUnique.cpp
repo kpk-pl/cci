@@ -1,4 +1,5 @@
 #include <iostream>
+#include <gtest/gtest.h>
 
 bool isUnique(std::string_view const input)
 {
@@ -18,9 +19,13 @@ bool isUnique(std::string_view const input)
   return true;
 }
 
-int main()
+TEST(IsUniqueTest, JustUniqueLetters)
 {
-  char const input[] = "Unique_symbol";
-  std::cout << std::boolalpha << isUnique(input) << std::endl;
-  return 0;
+  ASSERT_TRUE(isUnique("Unique_symbol"));
+}
+
+int main(int argc, char** argv)
+{
+  testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
 }
