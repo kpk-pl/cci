@@ -1,4 +1,7 @@
 ---
+AllowShortFunctionsOnASingleLine: Empty
 AlwaysBreakTemplateDeclarations: Yes
 BasedOnStyle: LLVM
+BreakBeforeBraces: Stroustrup
 IndentWidth: 2
+PointerAlignment: Left

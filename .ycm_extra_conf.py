@@ -6,6 +6,8 @@ import ycm_core
 import re
 
 BASE_FLAGS = [
+        '-x',
+        'c++',
         '-Wall',
         '-Wextra',
         '-std=c++2a',
@@ -18,6 +20,7 @@ SOURCE_EXTENSIONS = [
 
 SOURCE_DIRECTORIES = [
         'src',
+        'src/util',
         'deps/googletest/googletest/include'
         ]
 
@@ -26,6 +29,7 @@ HEADER_EXTENSIONS = [
         ]
 
 HEADER_DIRECTORIES = [
+        'src/util',
         ]
 
 def IsHeaderFile(filename):
